@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Erick Bryan Cubas · Data Analyst &amp; Data Engineer</title>
+  <meta name="description" content="Portfolio of Erick Bryan Cubas, Data Analyst & Data Engineer: Power BI, Python, SQL, cloud data pipelines and LLM-powered data tools." />
+  <meta name="theme-color" content="#0d1117" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="canonical" href="https://erick-bryan-cubas.github.io/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://erick-bryan-cubas.github.io/" />
+  <meta property="og:title" content="Erick Bryan Cubas · Data Analyst & Data Engineer" />
+  <meta property="og:description" content="Power BI, Python, SQL and cloud data pipelines. Query my portfolio with SQL." />
+  <meta property="og:image" content="https://github.com/Erick-Bryan-Cubas.png" />
+  <meta name="twitter:card" content="summary" />
+
+  <script>
+    // Apply the saved (or system) theme before first paint to avoid a flash.
+    (function () {
+      var theme;
+      try { theme = localStorage.getItem('theme'); } catch (_) {}
+      if (theme !== 'dark' && theme !== 'light') {
+        theme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+      }
+      document.documentElement.dataset.theme = theme;
+      if (theme === 'light') document.querySelector('meta[name="theme-color"]').content = '#f6f8fa';
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=1" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+  <div class="backdrop" aria-hidden="true"></div>
+
+  <nav class="topbar" aria-label="Main">
+    <a class="brand" href="#top" aria-label="Back to top">
+      <span class="t-user">erick</span>@<span class="t-host">datasage</span>:<span class="t-path">~</span>$<span class="brand-caret"></span>
+    </a>
+    <div class="nav-links">
+      <a href="#stack">stack</a>
+      <a href="#certs">certs</a>
+      <a href="#projects">projects</a>
+      <a href="#contact">contact</a>
+    </div>
+    <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle theme"></button>
+  </nav>
+
+  <main id="main">
+    <header class="hero" id="top">
+      <div class="avatar">
+        <img src="https://github.com/Erick-Bryan-Cubas.png?size=240" alt="Erick Bryan Cubas" width="112" height="112" fetchpriority="high" />
+        <span class="status-dot" title="Online"></span>
+      </div>
+      <h1>Hi, I'm <span class="gradient-text">Erick</span></h1>
+      <p class="hero-sub">Data Analyst &amp; Data Engineer <span class="sep">·</span> Data Science @ FIAP</p>
+
+      <section class="terminal" id="terminal" aria-label="Interactive terminal">
+        <div class="terminal-bar">
+          <span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span>
+          <span class="terminal-title">erick@datasage: ~</span>
+        </div>
+        <div class="terminal-body" id="terminal-body">
+          <div class="terminal-output" id="terminal-output" role="log" aria-live="polite"></div>
+          <form class="terminal-input-line" id="terminal-form" autocomplete="off">
+            <label class="sr-only" for="terminal-input">Terminal command</label>
+            <input id="terminal-input" type="text" spellcheck="false" autocapitalize="off" autocorrect="off" enterkeyhint="send"
+              placeholder="type help, neofetch or a SELECT…" />
+          </form>
+        </div>
+      </section>
+
+      <div class="hero-links" id="hero-links"></div>
+      <a class="scroll-hint" href="#stack" aria-label="Scroll to content">
+        <span>scroll</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 16.6 4.7 9.3l1.4-1.4 5.9 5.9 5.9-5.9 1.4 1.4z" /></svg>
+      </a>
+    </header>
+
+    <section class="section" id="stack">
+      <div class="section-head reveal">
+        <p class="eyebrow">-- 01 · SELECT * FROM stack;</p>
+        <h2>Stack &amp; tools</h2>
+        <p class="section-sub">What I use to move, model and visualize data.
+          <span class="legend"><span class="level"><i class="on"></i><i></i><i></i></span> familiar
+            <span class="level"><i class="on"></i><i class="on"></i><i></i></span> comfortable
+            <span class="level"><i class="on"></i><i class="on"></i><i class="on"></i></span> strong</span>
+        </p>
+      </div>
+      <div class="stack-grid" id="stack-grid"></div>
+    </section>
+
+    <section class="section" id="certs">
+      <div class="section-head reveal">
+        <p class="eyebrow">-- 02 · SELECT * FROM certs;</p>
+        <h2>Certifications</h2>
+        <p class="section-sub">Verified credentials, plus the Microsoft Fabric track I'm working on next.</p>
+      </div>
+      <div class="certs-grid" id="certs-grid"></div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="section-head reveal">
+        <p class="eyebrow">-- 03 · SELECT * FROM projects ORDER BY stars DESC;</p>
+        <h2>Projects</h2>
+        <p class="section-sub">A few I'm proud of, followed by everything else on my GitHub, live from the API.</p>
+      </div>
+      <div class="projects-grid featured-grid" id="featured-grid"></div>
+
+      <h3 class="subhead reveal">More repositories</h3>
+      <div class="repo-controls" id="repo-controls" hidden>
+        <label class="sr-only" for="repo-search">Search repositories</label>
+        <input class="input" id="repo-search" type="search" placeholder="Search name, description, topic…" />
+        <label class="sr-only" for="repo-lang">Language</label>
+        <select class="input" id="repo-lang">
+          <option value="">All languages</option>
+        </select>
+        <label class="sr-only" for="repo-sort">Sort</label>
+        <select class="input" id="repo-sort">
+          <option value="pushed">Recently updated</option>
+          <option value="stars">Most stars</option>
+          <option value="name">Name</option>
+        </select>
+        <label class="check"><input type="checkbox" id="repo-forks" /> include forks</label>
+      </div>
+      <div class="projects-grid" id="repo-grid">
+        <p class="empty"><span class="loader" aria-hidden="true"></span> Loading repositories from GitHub…</p>
+      </div>
+      <div class="repo-footer">
+        <p class="muted" id="repo-status" aria-live="polite"></p>
+        <button class="btn btn-ghost" id="repo-more" type="button" hidden>Show more</button>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="contact-card panel reveal">
+        <p class="eyebrow">-- 04 · INSERT INTO conversations VALUES ('you', 'me');</p>
+        <h2>Let's build something with data</h2>
+        <p class="section-sub">Open to data analytics and data engineering opportunities, collaborations and a good chat about pipelines.</p>
+        <div class="contact-links" id="contact-links"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Erick Bryan Cubas · built with HTML, CSS, vanilla JS and too much coffee</p>
+    <p class="muted">Psst: the terminal at the top speaks SQL.</p>
+  </footer>
+
+  <noscript>
+    <p class="noscript">This portfolio renders its sections with JavaScript. You can still find everything on
+      <a href="https://github.com/Erick-Bryan-Cubas">GitHub</a>.</p>
+  </noscript>
+
+  <script src="assets/js/config.js?v=1" defer></script>
+  <script src="assets/js/core.js?v=1" defer></script>
+  <script src="assets/js/sql.js?v=1" defer></script>
+  <script src="assets/js/terminal.js?v=1" defer></script>
+  <script src="assets/js/commands.js?v=1" defer></script>
+  <script src="assets/js/main.js?v=1" defer></script>
+</body>
+</html>
